@@ -84,6 +84,7 @@ body {
     flex-basis: 50%;
     order: 2;
     padding: 30px;
+    border-radius: 10px;
 }
 
 .podrobny-popis {
