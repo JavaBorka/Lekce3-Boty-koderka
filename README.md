@@ -59,3 +59,5 @@ Je úplně v pořádku, pokud si nakonec zvolíš jednodušší variantu (např.
 
 Pokud nevíš, co je to **fork repozitáře** a jak ho provést, podívej se na [krátké video](https://youtu.be/K7rE3jRCjD4).
 
+## Edit: řešení viz. níže:
+https://github.com/Czechitas-Koderka-podklady/Reseni-prikladu

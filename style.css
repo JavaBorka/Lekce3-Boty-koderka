@@ -25,25 +25,25 @@ body {
     font-size: 14px;
     font-weight: 400;
     background-color: #f5f5f5;
-    padding: 180px 0;
+    padding: 180px 0; /* padding nedávat*/
 }
 
 .kontejner {
     display: flex;
     width: 670px;
     height: 470px;
-    margin: auto;
+    margin: auto; /* margin: 100px auto*/
+    background-color: white;
     border-radius: 10px;
-    box-shadow: 3px 3px 3px rgb(145, 144, 144);
+    box-shadow: 3px 3px 3px rgb(145, 144, 144); /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); */
 }
 
 .leva {
     font-size: 16px;
     font-weight: 500;
     padding: 30px;
-    color: white;
     border-radius: 10px 0 0 10px;
-    flex-basis: 50%;
+    flex-basis: 50%; /* flex: 0 0 50%; */
     order: 1;
     background-image: linear-gradient(to top, #50cc49, #06d7c1);
     position: relative;
@@ -55,6 +55,7 @@ body {
 
 .claim {
     margin: 0;
+    color: white;
 }
 
 .bota {
@@ -69,6 +70,7 @@ body {
     position: absolute;
     right: 25px;
     bottom: 65px;
+    color: white;
 }
 
 .zaruka {
@@ -77,10 +79,21 @@ body {
     position: absolute;
     right: 25px;
     bottom: 48px;
+    color: white;
 }
 
+/* Třídy .cena a .zaruka je lepší uzavřít do samostatneho divu a jenom jim nastavit jinou velikost a váhu */
+/* cenovku chceme v pravém dolním rohu zelené poloviny, ale ne úplně v rohu, ale se stejným odstupem od okraje, jako mají ostatní prvky (30px), takže nastavíme pravý dolní roh cenovky 30px od pravého okraje, 30px od dolního okraje */
+
+/* .cenovka {
+	position: absolute;
+	right: 30px;
+	bottom: 30px;
+	text-align: right;
+	color: white;
+} */
+
 .prava {
-    background-color: white;
     flex-basis: 50%;
     order: 2;
     padding: 30px;
@@ -121,11 +134,62 @@ h2 {
     display: inline-block;
 }
 
+/* .velikosti {
+	vynulujeme výchozí odsazení odrážkového seznamu
+	margin: 0;
+	padding: 0;
+
+	odstraníme odrážky z odrážkového seznamu
+	list-style: none;
+
+	a uděláme z něho flexbox - tj. velikosti bot budou vedle sebe
+	display: flex;
+
+	zarovnáme položky flexboxu na jejich vertikální střed
+	align-items: center;
+} */
+
 .velikosti li {
     display: inline-block;
     list-style-type: none;
     margin: 0 22px 0 0;
 }
+
+/* .velikosti li {
+	vynulujeme standardně nastavená odsazení odrážek v seznamu.
+	Pouze chceme, aby vpravo od položky byla mezera 10px, aby byly velikosti bot od sebe mírně odsazené
+	margin: 0 10px 0 0;
+	padding: 0;
+
+	nastavíme velikosti položky seznamu na pevné hodnoty, šířka a výška jsou stejné, abychom mohli pomocí border-radius udělat kolem položky kolečko
+	width: 30px;
+	height: 30px;
+
+	nastavíme výšku řádku na stejnou hodnotu, jako je výška položky seznamu, což znamená, že text je vertikálně uprostřed řádku, tj. i uprostřed kolečka, když bude položka vybraná
+	line-height: 30px;
+
+	vycentrujeme i horizontálně
+	text-align: center;
+
+	orámování je sice průhlednou (transparent) barvou, ale už existuje, takže při najetí myši změníme jen jeho barvu. Kdybychom při najetí myši přidávali celý okraj, číslo uvnitř by nám poskakovalo nebo by se měnila velikost prvku o přidaný okraj
+	border: 1px solid transparent;
+
+	rámeček ve tvaru kolečka
+	border-radius: 50%;
+
+	kursor nad prvkem má tvar ruky s namířeným ukazováčkem
+	cursor: pointer;
+} */
+
+/* .velikosti li:hover,
+.velikosti li:active,
+.velikosti li:focus,
+.velikosti li.vybrana {
+	barva textu a rámečku pro vybranou velikost bot (nebo tu, nad kterou je myš)
+	font-weight: 500;
+	color: #f15f42;
+	border: 1px solid #f15f42;
+} */
 
 .select-size {
     margin: 0;
@@ -149,3 +213,30 @@ h2 {
     text-decoration: none;
     text-transform: uppercase;
 }
+
+/* .akce {
+	box, který obsahuje tlačítko koupit, umístíme absolutně do levého dolního rohu bíle poloviny.
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+} */
+
+/* .tlacitko {
+	display: inline-block;
+	padding: 18px 30px 14px 30px;
+	line-height: 1;
+	text-transform: uppercase;
+	text-decoration: none;
+	letter-spacing: 1px;
+	background-color: #f15f42;
+	color: white;
+	border-radius: 6px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
+} */
+
+/* .tlacitko:hover,
+.tlacitko:active,
+.tlacitko:focus {
+	změna barvy pozadí při najetí myší nad tlačítko
+	background-color: #d54c31;
+} */
